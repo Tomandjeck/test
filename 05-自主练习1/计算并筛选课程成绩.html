@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用数据接收用户输入的7门功课的成绩，然后在页面上显示其总成绩和平均分，并列出小于60的成绩</title>
+</head>
+<body>
+<script>
+    let sum,avg;
+    let grade=new Array(7);
+    for(let i=1;i<=7;i++)
+    {
+        grade[i-1]=prompt("输入第"+i+"名学生的成绩为","0");
+    }
+    window.document.writeln("其中成绩小于60分的有：");
+    for(let i=0;i<grade.length;i++)
+    {
+        sum=grade[i]+sum;
+        avg=sum/7;
+        if(grade[i]<60) document.writeln(grade[i]);
+    }
+
+</script>
+</body>
+</html>

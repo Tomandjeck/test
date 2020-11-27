@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算商品总价</title>
+    <script type="text/javascript">
+        function Total(price,num) {
+            let total=price*num;
+            document.write("商品的总价为："+total);
+        }
+    </script>
+</head>
+<body>
+<script>
+    Total(2.3,5);//直接调用
+</script>
+<!--超链接调用-->
+<a href="javaScript:Total(2.3,5)">要调用Total()函数请单击</a>
+</body>
+</html>

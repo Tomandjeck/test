@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求1+（1+2）+（1+2+3）+...+(1+2+...+n</title>
+    <script type="text/javascript">
+        function Sum(n){
+            //求1+2+...+n的累加和
+            let sum=0,i;
+            for(i=1;i<=n;i++){
+                sum=sum+i;
+            }
+            return sum;
+        }
+        function Sum_All(n){
+            //计算sum(1)+sum(2)+..+sum(n)的累加和
+            let sum=0,i;
+            for(i=1;i<=n;i++)
+                sum=sum+Sum(i);
+            return sum;
+        }
+    </script>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt("n=","0"));//parseInt将字符串化作十进制的数
+    alert("该算式的值为："+Sum_All(n));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>每隔5秒在页面上弹出实时时间的提醒对话框</title>
+    <script>
+        function showTime() {
+            let now=new Date();
+            alert("当前时间是："+now.toLocaleTimeString());//获取当前时间
+        }
+        let timerID=window.setInterval("showTime()",5000);//设置一个定时器，每隔5秒执行一次showTime()
+        function stopTime(){
+            window.clearInterval(timerID);//取消定时器
+            alert("已取消定时器");
+        }
+    </script>
+</head>
+<body>
+<p><a href="javascript:stopTime()">取消定时器</a> </p>
+</body>
+</html>

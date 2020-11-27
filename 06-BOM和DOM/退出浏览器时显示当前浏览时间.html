@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退出浏览器时显示当前浏览时间</title>
+</head>
+<body bgcolor="#fef4d2" onload=Tamarack>
+<br>
+    <fond color="ffaafa"><h2>浏览某页所用的时间</h2></fond>
+    <hr width="300">
+    <script>
+        let entered=new Date();
+        function Tamarack(){
+            let now=new Date();
+            let seconds=Math.floor((new.getTime()-entered.getTime())/1000);
+            let minutes=Math.floor(seconds/60);
+            let second=seconds%60;
+            let minute=minutes%60;
+            document.time.timer.value=minutes+":"+seconds;
+            let timeID=setTimeout("Tamarack()",1000);
+        }
+    </script>
+    <table>
+        <tr>
+            <td width="100%">
+                <font FACE="ariel,helvetica" size="-1">
+                    <form>
+                        <div align="center"><center>
+                            <p>浏览本页共用去<input type="text" name="timer" size="6" value="0:00">秒 </p>
+                        </center></div>
+                    </form>
+                </font>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

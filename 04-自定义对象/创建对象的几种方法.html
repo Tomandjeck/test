@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象的几种方法</title>
+</head>
+<body>
+<!-Object创建对象—>
+<script>
+    let animal=new Object();
+    animal.name="花花";
+    animal.owner="王小丽";
+    animal.color="黑色";
+    document.writeln(animal.owner+"家狗的名字叫"+animal.name+"，颜色是"+animal.color);
+</script>
+
+<!-字面量创建对象->
+<script>
+    let animal={
+        name:"花花",
+        owner:"王小丽",
+        color:"黑色"
+    }
+    document.writeln(animal.owner+"家狗的名字叫"+animal.name+"，颜色是"+animal.color);
+</script>
+
+<!-构造函数创建对象->
+<script>
+    function Animal(name,color) {
+        this.name=name;
+        this.color=color;
+    }
+    let animal1=new Animal("花花","黑色");
+    let animal2=new Animal("狗狗","黄色");
+    document.writeln("喵星人的名字是"+animal1.name+"，颜色为"+animal1.color);
+    document.writeln("汪星人的名字是"+animal2.name+"，颜色为"+animal2.color);
+    document.writeln(animal1.constructor.toString());
+</script>
+</body>
+</html>

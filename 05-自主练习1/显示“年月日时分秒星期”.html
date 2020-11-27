@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面上显示年月日时分秒星期</title>
+</head>
+<body>
+<script>
+    let a,b,i;
+    let today=new Date();
+    a=today.getDay();
+    switch (a) {
+        case (0):b="星期日";
+        case (1):b="星期一";
+        case (2):b="星期二";
+        case (3):b="星期三";
+        case (4):b="星期四";
+        case (5):b="星期五";
+        case (6):b="星期六";
+    }
+    document.writeln("现在是"+today.getFullYear()+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日"
+        +today.getHours()+"时"+today.getMinutes()+"分"+today.getSeconds()+"秒"+"("+b+")"+"，欢迎你的到来");
+</script>
+</body>
+</html>

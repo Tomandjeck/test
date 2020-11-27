@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过返回值求两个数中最大数</title>
+    <script type="text/javascript">
+        function Max(x,y){
+            //求x,y中最大值
+            let max;
+            if(x>y) max=x;
+            else max=y;
+            return max;
+        }
+    </script>
+</head>
+<body>
+<script>
+    let x,y,m;
+    x=prompt("请输入第一个数：","0");
+    y=prompt("请输入第一个数：","0");
+    m=Max(x,y);
+    alert("这两个数中最大的数为："+m);
+</script>
+
+</body>
+</html>

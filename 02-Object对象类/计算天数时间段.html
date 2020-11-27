@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算自己活了多少天</title>
+</head>
+<body>
+<script>
+    let your_date=prompt("请输入出生年月日，格式为：xxxx/x/x","");
+    let born_date=new Date(your_date);
+    let now_date=new Date();
+    let born_days;
+    born_days=born_date.getTime();
+    let new_days=now_date.getTime();
+    let result=new_days-born_days;
+    let num_days=24*60*60;
+    let all_days=parseInt(result/num_days);
+    alert("您好！您已经活了"+all_days+"天");
+    </script>
+
+</body>
+</html>
